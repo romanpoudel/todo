@@ -1,7 +1,7 @@
 import "./App.css";
-// import { useState } from "react";
+import { useState } from "react";
 // import DeleteIcon from '@mui/icons-material/Delete';
-// import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import Navbar from "./Components/Navbar";
 
 function App() {
@@ -54,7 +54,7 @@ function App() {
             </div>
             <div>
             <button onClick={()=>handleClick(index)}><CheckCircleOutlineIcon /></button>
-              <button onClick={()=>handleClick(index)}><DeleteIcon /></button>
+              {/* <button onClick={()=>handleClick(index)}><DeleteIcon /></button> */}
             </div>
           </div>
         ))}
