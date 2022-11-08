@@ -5,28 +5,28 @@ import "./App.css";
 import Navbar from "./Components/Navbar";
 
 function App() {
-  // const [message, setMessage] = useState("");
-  // const [list, setList] = useState([]);
+  const [message, setMessage] = useState("");
+  const [list, setList] = useState([]);
 
-  // const handleKeyDown = (event) => {
-  //   if (event.key === "Enter") {
-  //     if (!message) {
-  //     } else {
-  //       event.preventDefault();
-  //       console.log("value is:", message);
-  //       setList((current) => [...current, message]);
-  //       setMessage("");
-  //     }
-  //   }
-  // };
-  // console.log(list);
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      if (!message) {
+      } else {
+        event.preventDefault();
+        console.log("value is:", message);
+        setList((current) => [...current, message]);
+        setMessage("");
+      }
+    }
+  };
+  console.log(list);
 
-  // const handleClick = (index) => {
-  //   const remainingList = list.filter((item, i) => {
-  //     return i !== index;
-  //   });
-  //   setList(remainingList);
-  // };
+  const handleClick = (index) => {
+    const remainingList = list.filter((item, i) => {
+      return i !== index;
+    });
+    setList(remainingList);
+  };
 
   return (
     <div className="App flex flex-col m-10 p-10 align-center border-4 rounded-md justify-center">
@@ -34,7 +34,7 @@ function App() {
         <h4 className="font-bold text-3xl mb-4 ">To-Do</h4>
       </div>
       <Navbar />
-      {/* <div className="Input">
+      <div className="Input">
         <input
           className="w-4/5 p-3 border-2 outline-none rounded-lg border-gray-600"
           type="text"
@@ -42,8 +42,8 @@ function App() {
           value={message}
           onKeyDown={handleKeyDown}
         />
-      </div> */}
-      {/* <div className="flex flex-col items-center  display space-y-3 bg-gray-300  rounded-md m-6 p-6">
+      </div>
+      <div className="flex flex-col items-center  display space-y-3 bg-gray-300  rounded-md m-6 p-6">
         <div className="font-bold">
           <p>Tasks</p>
         </div>
@@ -58,7 +58,7 @@ function App() {
             </div>
           </div>
         ))}
-      </div> */}
+      </div>
     </div>
   );
 }
